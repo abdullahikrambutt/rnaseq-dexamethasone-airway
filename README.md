@@ -42,6 +42,8 @@ Significance threshold: adjusted p-value (Benjamini–Hochberg) < 0.05 and |log2
 
 ![Top genes](figures/08_top_gene_counts.png)
 
+![Heat map](figures/07_top_genes_heatmap.png)
+
 **Pathways.** Up-regulated genes were enriched for response to glucocorticoid/hormone stimulus, muscle processes and extracellular matrix organization. Down-regulated genes were enriched for blood vessel development, cell migration/guidance and ion transport. Together, this suggests dexamethasone induces classic glucocorticoid target genes while suppressing inflammatory and migratory programmes.
 ## How to reproduce
 
@@ -83,9 +85,7 @@ Figures are saved to `figures/` and result tables to `results/`.
 - One dose and one time point; a time course would show which changes are direct and which are downstream.
 - Gene-level counts were taken as given; a full pipeline would start from raw FASTQ reads (quality control, alignment or pseudo-alignment, quantification).
 
-## About this project
-
-This is a self-directed learning project to practise a complete bulk RNA-seq differential expression workflow. It follows established community resources:
+## Resources
 
 - Love, Anders & Huber. [DESeq2 vignette](https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html)
 - Love et al. (2016). [RNA-seq workflow: gene-level exploratory analysis and differential expression](https://bioconductor.org/packages/rnaseqGene/), *F1000Research*
