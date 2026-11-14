@@ -31,20 +31,18 @@ Significance threshold: adjusted p-value (Benjamini–Hochberg) < 0.05 and |log2
 
 <!-- Fill these in from YOUR results after running the analysis. -->
 
-**Sample QC.** [Describe the PCA: what does PC1 separate? What does PC2 separate? Does treatment or donor explain more variation?]
-
+**Sample QC.** Library sizes (~15–31 M reads) were balanced across conditions. In the PCA, PC1 (43%) separated treated from untreated samples and PC2 (25%) mainly separated donor N080611, so treatment is the main source of variation, with a clear donor effect handled by the paired design.
 ![PCA](figures/02_pca.png)
 
-**Differential expression.** [X] genes were significantly differentially expressed: [X] up-regulated and [X] down-regulated in dexamethasone-treated cells.
+**Differential expression.** 
 
 ![Volcano plot](figures/06_volcano.png)
 
-**Top genes.** [Name 3–5 of the top genes and what is known about them. Do any match known glucocorticoid-response genes reported by Himes et al.?]
+**Top genes.** Top hits included classic glucocorticoid targets such as **DUSP1**, **PER1**, **KLF15** and **MT2A**, alongside strong inductions of **SPARCL1**, **CACNB2**, **MAOA** and **GPX3**. The pro-inflammatory adhesion molecule **VCAM1** was the most significant down-regulated gene. All top genes changed consistently in every donor.
 
 ![Top genes](figures/08_top_gene_counts.png)
 
-**Pathways.** [Summarise the main GO terms among up- and down-regulated genes, and whether they make biological sense for a glucocorticoid.]
-
+**Pathways.** Up-regulated genes were enriched for response to glucocorticoid/hormone stimulus, muscle processes and extracellular matrix organization. Down-regulated genes were enriched for blood vessel development, cell migration/guidance and ion transport. Together, this suggests dexamethasone induces classic glucocorticoid target genes while suppressing inflammatory and migratory programmes.
 ## How to reproduce
 
 ```bash
@@ -84,7 +82,6 @@ Figures are saved to `figures/` and result tables to `results/`.
 - Only 4 donors, so statistical power is limited and results may not generalise.
 - One dose and one time point; a time course would show which changes are direct and which are downstream.
 - Gene-level counts were taken as given; a full pipeline would start from raw FASTQ reads (quality control, alignment or pseudo-alignment, quantification).
-- [Add your own idea, e.g. comparing results with a different method such as edgeR or limma-voom.]
 
 ## About this project
 
